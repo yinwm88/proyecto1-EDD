@@ -20,9 +20,9 @@ mvn install
 >Despues de usar el programa varias veces, correr el siguiente comando:
 
 
-  ```
-  mvn clean install
-  ```
+ ```
+ mvn clean install
+ ```
 
 Despues 
 
