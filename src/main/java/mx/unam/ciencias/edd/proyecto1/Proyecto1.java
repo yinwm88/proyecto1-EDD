@@ -21,7 +21,7 @@ public class Proyecto1 {
         }else{
 
             if(Banderas.oBandera(args)&& Banderas.getArchivo(args)==null){
-                System.out.println("\nsort: option requires an argument -- 'o'.");
+                System.out.println("sort: option requires an argument -- 'o'.");
             }else{
 
                 if(Entrada.encontrarEntrada(args)!=null){
@@ -40,10 +40,9 @@ public class Proyecto1 {
                         if(Banderas.getArchivo(args)!=null)
                             Salida.escribirArchivo(listaLimpia, Banderas.getArchivo(args));
                         else{
-                            System.out.println("\nsort: option requires an argument -- 'o'.");
+                            System.out.println("sort: option requires an argument -- 'o'.");
                         }
                 }else{
-                    System.out.println("\n");
                     Salida.escribirEstandar(listaLimpia);
                 }
                 }
