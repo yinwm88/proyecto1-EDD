@@ -35,7 +35,6 @@ public class Entrada{
     
     
     // Metodo auxiliar del metodo encontrarEtrada, este es usado para encontrar el archivo correcto para leer.
-    
     public static Lista<String> manejoObandera(String[] entrada, int ini, int banderaO){
             for(int i = ini; i < banderaO; i++)
                 if((!entrada[i].equals("-r")) && !entrada[i].equals("-o"))
@@ -44,7 +43,6 @@ public class Entrada{
     }
 
     //Metodo auxiliar de encontrarEtrada, este es usado para encontrar el indice que ocupa la bandera -o en el arreglo de  entrada 
-
     public static int getIndiceObadnera(String[] entrada){
         for (int i = 0; i < entrada.length; i++)
             if (entrada[i].equals("-o"))

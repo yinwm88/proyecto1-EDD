@@ -18,6 +18,12 @@ public class Banderas {
         return false;
     }
 
+    /**
+     * Método que nos dice si se tiene que simular la acción de la bandera -o.
+     * 
+     * @param entrada Entrada.
+     * @return True si hay que simular la acción, False en caso contrario.
+     */
     public static boolean oBandera(String[] entrada) {
         for (int i = 0; i < entrada.length; i++)
             if (entrada[i].equals("-o"))

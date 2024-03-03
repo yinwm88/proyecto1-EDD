@@ -20,7 +20,7 @@ public class Proyecto1 {
             Salida.escribirEstandar(listaLimpia);
         }else{
 
-            if(Banderas.oBandera(args)&& Banderas.getArchivo(args)==null){
+            if(Banderas.oBandera(args) && Banderas.getArchivo(args)==null){
                 System.out.println("sort: option requires an argument -- 'o'.");
             }else{
 
