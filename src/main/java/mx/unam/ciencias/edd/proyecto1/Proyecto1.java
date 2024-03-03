@@ -36,16 +36,11 @@ public class Proyecto1 {
                     listaLimpia = listaLimpia.reversa();
 
                 if(Banderas.oBandera(args)){
-                        
-                        if(Banderas.getArchivo(args)!=null)
-                            Salida.escribirArchivo(listaLimpia, Banderas.getArchivo(args));
-                        else{
-                            System.out.println("sort: option requires an argument -- 'o'.");
-                        }
+                    Salida.escribirArchivo(listaLimpia, Banderas.getArchivo(args)); 
                 }else{
                     Salida.escribirEstandar(listaLimpia);
                 }
-                }
+            }
         }
 
     }
