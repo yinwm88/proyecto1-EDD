@@ -19,31 +19,41 @@ public class Entrada{
      * 
      */
     public static Lista<String> encontrarEntrada(String[] entrada){
-        int posicion = 0;
-        for(int i = 0; i < entrada.length; i++){
-            if((!entrada[i].equals("-r")) && !entrada[i].equals("-o")){
-                if(Banderas.oBandera(entrada)){
-                    posicion = getIndiceObadnera(entrada);
-                    return manejoObandera(entrada, 0, posicion);
-                }else{
-                    return leerArchivo(entrada[i]);
+            if(Banderas.oBandera(entrada)){
+                int indiceBO;
+                int indiceABO;
+                for(int i = 0; i < entrada.length; i++){
+                    indiceBO = getIndiceObandera(entrada);
+                    indiceABO = Banderas.getIndiceArchivoSalida(entrada);
+                    if(manejoObandera(entrada, 0, indiceBO) != null)
+                       return manejoObandera(entrada, 0, indiceBO);
+                    else
+                        return manejoObandera(entrada, indiceABO+1, entrada.length); 
                 }
-            }     
-        }
-        return null;
+            }else{
+                for(int i = 0; i < entrada.length; i++){
+                    if(!entrada[i].equals("-r"))
+                        return leerArchivo(entrada[i]);
+                }
+            }             
+            return null;
     }
-    
-    
-    // Metodo auxiliar del metodo encontrarEtrada, este es usado para encontrar el archivo correcto para leer.
-    public static Lista<String> manejoObandera(String[] entrada, int ini, int banderaO){
-            for(int i = ini; i < banderaO; i++)
-                if((!entrada[i].equals("-r")) && !entrada[i].equals("-o"))
-                    return leerArchivo(entrada[i]);
+
+
+/**
+ * 
+ */
+    // Metodo auxiliar del metodo encontrarEtrada, este es usado para encontrar el indice del archivo correcto para leer.
+    public static Lista<String> manejoObandera(String[] entrada, int ini, int fin){
+            for(int i = ini; i < fin; i++)
+                if((!entrada[i].equals("-r")) && !entrada[i].equals("-o")){
+                        return leerArchivo(entrada[i]);
+                }
             return null;
     }
 
     //Metodo auxiliar de encontrarEtrada, este es usado para encontrar el indice que ocupa la bandera -o en el arreglo de  entrada 
-    public static int getIndiceObadnera(String[] entrada){
+    public static int getIndiceObandera(String[] entrada){
         for (int i = 0; i < entrada.length; i++)
             if (entrada[i].equals("-o"))
                 return i;   
