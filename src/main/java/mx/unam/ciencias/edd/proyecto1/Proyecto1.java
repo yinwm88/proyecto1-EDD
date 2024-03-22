@@ -5,7 +5,7 @@ import mx.unam.ciencias.edd.Lista;
 import java.io.BufferedReader;
 
 /**
- * Clase que simula el comando sort de Linux.
+ * Clase que simula de manera sencilla el comando sort de Linux.
  * @author Wong Mestas
  */
 public class Proyecto1 {

@@ -40,9 +40,6 @@ public class Entrada{
     }
 
 
-/**
- * 
- */
     // Metodo auxiliar del metodo encontrarEtrada, este es usado para encontrar el indice del archivo correcto para leer.
     public static Lista<String> manejoObandera(String[] entrada, int ini, int fin){
             for(int i = ini; i < fin; i++)
