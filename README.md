@@ -1,8 +1,8 @@
 **USAGE**
 
-```cd proyecto1-EDD```
-```mvn install```
-```java -jar target/proyecto1.jar```
+```cd proyecto1-EDD``` ->
+```mvn install``` ->
+```java -jar target/proyecto1.jar``` ->
 
 <div>
 Ingrese alguna de las siguientes opciones seguido del último comando:
