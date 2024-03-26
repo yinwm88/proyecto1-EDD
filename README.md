@@ -21,3 +21,6 @@ Ingrese alguna de las siguientes opciones seguido del último comando:
 
   Se puede combinar todo lo anterior, solo ten en cuenta que o se lee de un archivo en especifico o de la entrada estandar, pero no de ambos.
 </div>
+
+**Después de correr el programa varias veces**
+```mvn clean```
